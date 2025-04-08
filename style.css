@@ -92,6 +92,15 @@
     gap: 15px;
   }
   
+  .skills-description {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
   .skill {
     background: #ffffff;
     padding: 10px 20px;
@@ -112,7 +121,15 @@
     gap: 20px;
     padding: 0 20px;
   }
-  
+  .projects-description {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
 /* Individual Project Cards */
 .project-card {
     background: #444444;  /* Dark background for the card */
