@@ -1,0 +1,193 @@
+/* Global styles */
+@font-face {
+    font-family: 'Jost';
+    src: url('fonts/Jost-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Bold Jost font */
+  @font-face {
+    font-family: 'Jost';
+    src: url('fonts/Jost-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    background-color: black; /* Black background for the entire page */
+    color: white;            /* White text color */
+    line-height: 1.6;
+  }
+  
+/* Intro text styling */
+.intro {
+    margin-top: 20px;  /* Add some space above the intro */
+    font-size: 1.1rem;  /* Slightly larger font size */
+    line-height: 1.6;   /* Better line spacing for readability */
+    max-width: 600px;   /* Limit the width to prevent stretching */
+    text-align: left;   /* Align the text to the left */
+    padding: 0 15px;    /* Add padding to prevent text from touching the edges */
+  }
+  
+  h1, h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .hero {
+    background-color: black;  
+    background-image: url('images/hero-bg.jpg'); 
+    background-size: cover;    
+    background-position: center;
+    color: white;              
+    height: 100vh;             
+    display: flex;             
+    align-items: center;       
+    padding-left: 5%;          
+  }
+  
+  .hero-content {
+    text-align: left;
+    animation: fadeSlideIn 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .hero h1 {
+    font-family: 'Jost', sans-serif; 
+    font-size: 5rem;      
+    font-weight: bold;   
+    margin: 0;
+  }
+  
+  .hero .tagline {
+    font-size: 1.5rem;    
+    font-weight: normal;   
+    margin-top: 0.5rem;
+  }
+  
+  
+  /* Skills section */
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .skill {
+    background: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: black;
+    transition: transform 0.3s;
+  }
+  
+  .skill:hover {
+    transform: scale(1.1);
+    background: #383838;
+  }
+  
+/* Projects section */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+/* Individual Project Cards */
+.project-card {
+    background: #444444;  /* Dark background for the card */
+    padding: 0;            /* Remove padding around the card */
+    border-radius: 10px;   /* Round the corners of the card */
+    color: white;          /* White text color */
+    transition: box-shadow 0.3s, background-color 0.3s;  /* Smooth transition for box-shadow and background-color */
+    overflow: hidden;      /* Ensure image stays within the card's border */
+  }
+  
+  .project-card h3 {
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  .project-card p {
+    padding: 0 50px;       /* Add left and right padding to the description */
+    margin: 2;
+    color: white;
+  }
+  
+  .project-card:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);  /* Lighter shadow to contrast with dark background */
+    background: #333333;   /* Slightly lighter background on hover */
+  }
+  
+  .project-image {
+    width: 100%;           /* Image takes the full width of the card */
+    height: 200px;         /* Fixed height for the image */
+    object-fit: cover;     /* Ensure the image fills the area without distortion */
+    display: block;        /* Remove any bottom margin that might occur from inline-block images */
+    border-radius: 10px 10px 0 0; /* Round the top corners only for the image */
+  }
+  
+  /* Contact form */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #555;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .hero {
+      height: 70vh;
+    }
+    .project-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
